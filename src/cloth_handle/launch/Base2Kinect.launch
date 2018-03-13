@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="x"   value="-0.05" />
+  <arg name="y"   value="-1.2" />
+  <arg name="z"   value="1.8" />
+  <arg name="r"   value="-3.14" />
+  <arg name="p"   value="0.0" />
+  <arg name="y_"  value="1.57" />
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link"
+    args="$(arg x) $(arg y) $(arg z) $(arg y_) $(arg p) $(arg r) /kinect2_ir_optical_frame /world 100" />
+</launch>

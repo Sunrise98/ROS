@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+	<node pkg="lis_core" name="end_pose_node" type="end_pose_node"/>
+	<node pkg="lis_core" name="ik_node" type="ik_node"/>
+	<node pkg="lis_core" name="exe_node" type="exe_node">
+</launch>
