@@ -96,6 +96,13 @@ target_link_libraries(cloth_extraction
   ${kinect2_bridge_LIBRARIES}
 )
 
+add_executable(kinect2_pointcloud_rgb src/kinect2_pointcloud_rgb.cpp)
+target_link_libraries(kinect2_pointcloud
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${kinect2_bridge_LIBRARIES}
+)
 
 add_executable(kinect2_pointcloud src/kinect2_pointcloud.cpp)
 target_link_libraries(kinect2_pointcloud
@@ -147,6 +154,14 @@ target_link_libraries(tf_base2desk
 
 add_executable(motion_node src/motion.cpp)
 target_link_libraries(motion_node
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${kinect2_bridge_LIBRARIES}
+)
+
+add_executable(motion_node_ src/motion_.cpp)
+target_link_libraries(motion_node_
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
   ${PCL_LIBRARIES}

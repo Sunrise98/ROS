@@ -96,6 +96,13 @@ target_link_libraries(cloth_extraction
   ${kinect2_bridge_LIBRARIES}
 )
 
+add_executable(kinect2_pointcloud_rgb src/kinect2_pointcloud_rgb.cpp)
+target_link_libraries(kinect2_pointcloud_rgb
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${kinect2_bridge_LIBRARIES}
+)
 
 add_executable(kinect2_pointcloud src/kinect2_pointcloud.cpp)
 target_link_libraries(kinect2_pointcloud

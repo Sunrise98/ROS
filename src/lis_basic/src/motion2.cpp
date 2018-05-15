@@ -67,9 +67,8 @@ class MOTION {
             try {
                 listener.waitForTransform("/base", ros::Time(0), "right_endgripper2", current_time, "/right_gripper", ros::Duration(1.0));
                 listener.lookupTransform("/base",  ros::Time(0), "right_endgripper2", current_time, "/right_gripper", tf_gripper_right);
-
-                listener.waitForTransform("/base", ros::Time(0), "left_endgripper2", current_time, "/left_gripper", ros::Duration(1.0));
-                listener.lookupTransform("/base",  ros::Time(0), "left_endgripper2", current_time, "/left_gripper", tf_gripper_left);
+                listener.waitForTransform("/base", ros::Time(0), "left_endgripper2",  current_time, "/left_gripper",  ros::Duration(1.0));
+                listener.lookupTransform("/base",  ros::Time(0), "left_endgripper2",  current_time, "/left_gripper",  tf_gripper_left);
             } catch (tf::TransformException ex) {
                 ROS_ERROR("%s",ex.what());
             }
